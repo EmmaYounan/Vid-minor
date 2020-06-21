@@ -27,6 +27,9 @@ window.addEventListener('resize', () => {
     for (var i = 0; i < element.length; i++) {
       var elementPosition = element[i].getBoundingClientRect().left + scrollX + element[i].clientWidth;
       if (scrollPosition > elementPosition) {
+          Array.from(element).forEach(element =>{
+              element.classList.remove("in-view")
+          })
         element[i].classList.add("in-view");
       }else if(scrollPosition < elementPosition){
         element[i].classList.remove("in-view"); 
@@ -35,4 +38,26 @@ window.addEventListener('resize', () => {
   }
   
   inView();
+  if(document.querySelector(".scroll-container")){
   document.querySelector(".scroll-container").addEventListener("scroll", inView);
+}
+
+    var textWrapper = document.querySelector('.ml6 .letters');
+    if(textWrapper) {
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    anime.timeline({loop: true})
+    .add({
+    targets: '.ml6 .letter',
+    translateY: ["1.1em", 0],
+    translateZ: 0,
+    duration: 750,
+    delay: (el, i) => 50 * i
+    }).add({
+    targets: '.ml6',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+    });
+}
