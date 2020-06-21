@@ -478,10 +478,9 @@ main section.details img {
 .demo-link {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-size: 1.2em;
-    padding-top: 20px;
+    font-size: 1.2rem;
     display: block;
-    margin-left: 350px;
+    margin-top: 30px;
 }
 
 .body-text {
