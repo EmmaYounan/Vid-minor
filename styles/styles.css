@@ -1,0 +1,626 @@
+@font-face {
+    font-family: Futura-condensed;
+    src: url(../fonts/Futura\ Condensed\ Extra\ Bold.otf);
+}
+
+body {
+    margin: 0px;
+    background-color: #6C00FF;
+}
+
+.home-main { 
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    scroll-snap-type: y mandatory;
+    -webkit-scroll-snap-destination: 0% 0%;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.scroll-container {
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-scroll-snap-destination: 0% 0%;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    z-index: 2;
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+h2 {
+    scroll-snap-align: center;
+    padding-left: 2.1em;
+    padding-right: 2.1em;
+    color: #000000;
+    font-family: Futura-condensed;
+    font-size: 4em;
+    text-transform: uppercase;
+}
+
+.about {
+    position: absolute;
+    background-color: #E44924;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    left: 0px;
+    right: 0px;
+    top: -100%;
+    z-index: 5;
+    transition: all .5s ease-in-out;
+}
+
+.show-about {
+    transition: all .5s ease-in-out;
+    top: 0;
+}
+
+.text-container {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+
+.about-btn {
+    border: none;
+    background-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #000000;
+}
+
+.about-btn:hover {
+    color: #E44924;
+}
+
+.about-btn:focus{
+    outline: none;
+ }
+
+.about h3 {
+    font-size: 5em;
+    margin: 0;
+    text-shadow: 0px 0px 0px #000000,
+    0.1px -0.1px 0px #000000,
+    0.2px -0.2px 0px #000000,
+    0.3px -0.3px 0px #000000,
+    0.4px -0.4px 0px #000000,
+    0.5px -0.5px 0px #000000,
+    0.6px -0.6px 0px #000000,
+    0.7px -0.7px 0px #000000,
+    0.8px -0.8px 0px #000000,
+    0.9px -0.9px 0px #000000,
+    1px -1px 0px #000000,
+    1.1px -1.1px 0px #000000,
+    1.2px -1.2px 0px #000000,
+    1.3px -1.3px 0px #000000,
+    1.4px -1.4px 0px #000000,
+    1.5px -1.5px 0px #000000,
+    1.6px -1.6px 0px #000000,
+    1.7px -1.7px 0px #000000,
+    1.8px -1.8px 0px #000000,
+    1.9px -1.9px 0px #000000,
+    2px -2px 0px #000000,
+    2.1px -2.1px 0px #000000,
+    2.2px -2.2px 0px #000000,
+    2.3px -2.3px 0px #000000,
+    2.4px -2.4px 0px #000000,
+    2.5px -2.5px 0px #000000,
+    2.6px -2.6px 0px #000000,
+    2.7px -2.7px 0px #000000,
+    2.8px -2.8px 0px #000000,
+    2.9px -2.9px 0px #000000,
+    3px -3px 0px #000000,
+    3.1px -3.1px 0px #000000,
+    3.2px -3.2px 0px #000000,
+    3.3px -3.3px 0px #000000,
+    3.4px -3.4px 0px #000000,
+    3.5px -3.5px 0px #000000,
+    3.6px -3.6px 0px #000000,
+    3.7px -3.7px 0px #000000,
+    3.8px -3.8px 0px #000000,
+    3.9px -3.9px 0px #000000,
+    4px -4px 0px #000000,
+    4.1px -4.1px 0px #000000,
+    4.2px -4.2px 0px #000000,
+    4.3px -4.3px 0px #000000,
+    4.4px -4.4px 0px #000000,
+    4.5px -4.5px 0px #000000,
+    4.6px -4.6px 0px #000000,
+    4.7px -4.7px 0px #000000,
+    4.8px -4.8px 0px #000000,
+    4.9px -4.9px 0px #000000,
+    5px -5px 0px #000000,
+    5.1px -5.1px 0px #000000,
+    5.2px -5.2px 0px #000000,
+    5.3px -5.3px 0px #000000,
+    5.4px -5.4px 0px #000000,
+    5.5px -5.5px 0px #000000,
+    5.6px -5.6px 0px #000000,
+    5.7px -5.7px 0px #000000,
+    5.8px -5.8px 0px #000000,
+    5.9px -5.9px 0px #000000,
+    6px -6px 0px #000000,
+    6.1px -6.1px 0px #000000,
+    6.2px -6.2px 0px #000000,
+    6.3px -6.3px 0px #000000,
+    6.4px -6.4px 0px #000000,
+    6.5px -6.5px 0px #000000,
+    6.6px -6.6px 0px #000000,
+    6.7px -6.7px 0px #000000,
+    6.8px -6.8px 0px #000000,
+    6.9px -6.9px 0px #000000,
+    7px -7px 0px #000000;
+    color: white;
+}
+
+.about p {
+    color: black;
+    width: 500px;
+    padding-left: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.about .about-btn-container {
+    padding: 2rem;
+}
+
+.about .close-about-btn {
+    border: none;
+    background-color: transparent;
+    float: right;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.about .close-about-btn:focus {
+    outline: none;
+}
+
+.about .close-about-btn:before {
+    content: "";
+    background-color: black;
+    width: 0.4em;
+    height: 3em;
+    top: 0;
+    z-index: 1;
+    position: absolute;
+    transform: rotate(45deg);
+}
+
+.about .close-about-btn:after {
+    content: "";
+    background-color: black;
+    width: 0.4em;
+    height: 3em;
+    top: 0;
+    z-index: 1;
+    position: absolute;
+    transform: rotate(-45deg);
+}
+
+.about .close-about-btn:hover:before {
+    background-color: #ffffff;
+}
+
+.about .close-about-btn:hover:after {
+    background-color: #ffffff;
+}
+
+h2:hover {
+    text-shadow: 0px 0px 0px #000000,
+    0.1px -0.1px 0px #000000,
+    0.2px -0.2px 0px #000000,
+    0.3px -0.3px 0px #000000,
+    0.4px -0.4px 0px #000000,
+    0.5px -0.5px 0px #000000,
+    0.6px -0.6px 0px #000000,
+    0.7px -0.7px 0px #000000,
+    0.8px -0.8px 0px #000000,
+    0.9px -0.9px 0px #000000,
+    1px -1px 0px #000000,
+    1.1px -1.1px 0px #000000,
+    1.2px -1.2px 0px #000000,
+    1.3px -1.3px 0px #000000,
+    1.4px -1.4px 0px #000000,
+    1.5px -1.5px 0px #000000,
+    1.6px -1.6px 0px #000000,
+    1.7px -1.7px 0px #000000,
+    1.8px -1.8px 0px #000000,
+    1.9px -1.9px 0px #000000,
+    2px -2px 0px #000000,
+    2.1px -2.1px 0px #000000,
+    2.2px -2.2px 0px #000000,
+    2.3px -2.3px 0px #000000,
+    2.4px -2.4px 0px #000000,
+    2.5px -2.5px 0px #000000,
+    2.6px -2.6px 0px #000000,
+    2.7px -2.7px 0px #000000,
+    2.8px -2.8px 0px #000000,
+    2.9px -2.9px 0px #000000,
+    3px -3px 0px #000000,
+    3.1px -3.1px 0px #000000,
+    3.2px -3.2px 0px #000000,
+    3.3px -3.3px 0px #000000,
+    3.4px -3.4px 0px #000000,
+    3.5px -3.5px 0px #000000,
+    3.6px -3.6px 0px #000000,
+    3.7px -3.7px 0px #000000,
+    3.8px -3.8px 0px #000000,
+    3.9px -3.9px 0px #000000,
+    4px -4px 0px #000000,
+    4.1px -4.1px 0px #000000,
+    4.2px -4.2px 0px #000000,
+    4.3px -4.3px 0px #000000,
+    4.4px -4.4px 0px #000000,
+    4.5px -4.5px 0px #000000,
+    4.6px -4.6px 0px #000000,
+    4.7px -4.7px 0px #000000,
+    4.8px -4.8px 0px #000000,
+    4.9px -4.9px 0px #000000,
+    5px -5px 0px #000000,
+    5.1px -5.1px 0px #000000,
+    5.2px -5.2px 0px #000000,
+    5.3px -5.3px 0px #000000,
+    5.4px -5.4px 0px #000000,
+    5.5px -5.5px 0px #000000,
+    5.6px -5.6px 0px #000000,
+    5.7px -5.7px 0px #000000,
+    5.8px -5.8px 0px #000000,
+    5.9px -5.9px 0px #000000,
+    6px -6px 0px #000000,
+    6.1px -6.1px 0px #000000,
+    6.2px -6.2px 0px #000000,
+    6.3px -6.3px 0px #000000,
+    6.4px -6.4px 0px #000000,
+    6.5px -6.5px 0px #000000,
+    6.6px -6.6px 0px #000000,
+    6.7px -6.7px 0px #000000,
+    6.8px -6.8px 0px #000000,
+    6.9px -6.9px 0px #000000,
+    7px -7px 0px #000000;
+    color: white;
+}
+
+.scroll-container a:nth-of-type(1) article h2 {
+    padding-left: 8em;
+    width: 263px;
+}
+
+.scroll-container a:nth-of-type(2) article h2 {
+    width: 703px;
+}
+
+.scroll-container a:nth-of-type(3) article h2 {
+    width: 469px;
+}
+
+.scroll-container a:nth-of-type(4) article h2 {
+    width: 525px;
+}
+
+.scroll-container a:nth-of-type(5) article h2 {
+    width: 410px;
+}
+
+.scroll-container a:nth-of-type(6) article h2 {
+    width: 414px;
+}
+
+.scroll-container a:nth-of-type(7) article h2 {
+    width: 350px;
+}
+
+.scroll-container a:nth-of-type(8) article h2 {
+    width: 260px;
+}
+
+.scroll-container a:nth-of-type(9) article h2 {
+    padding-right: 7em;
+    width: 263px;
+}
+
+.home-footer {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    left: 40px;
+    right: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #000000;
+}
+
+.details-footer {
+    display: flex;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding-right: 2em;
+    padding-left: 2em;
+    font-size: 1.2em;
+    color: #000000;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #E44924;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#eye-Layer_1 {
+    width: 70px;
+}
+
+#eye-Layer_1:hover {
+    animation-name: rotate-eye;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate-eye {
+    0% {
+
+    }
+    100% {
+        transform: rotate(360deg);
+    }   
+}
+
+main section.details {
+    height: 100%;
+}
+
+main section.details img {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+main section.details h2.h2-details {
+    padding: 0;
+    text-align: center;
+    text-shadow: 0px 0px 0px #000000,
+    0.1px -0.1px 0px #000000,
+    0.2px -0.2px 0px #000000,
+    0.3px -0.3px 0px #000000,
+    0.4px -0.4px 0px #000000,
+    0.5px -0.5px 0px #000000,
+    0.6px -0.6px 0px #000000,
+    0.7px -0.7px 0px #000000,
+    0.8px -0.8px 0px #000000,
+    0.9px -0.9px 0px #000000,
+    1px -1px 0px #000000,
+    1.1px -1.1px 0px #000000,
+    1.2px -1.2px 0px #000000,
+    1.3px -1.3px 0px #000000,
+    1.4px -1.4px 0px #000000,
+    1.5px -1.5px 0px #000000,
+    1.6px -1.6px 0px #000000,
+    1.7px -1.7px 0px #000000,
+    1.8px -1.8px 0px #000000,
+    1.9px -1.9px 0px #000000,
+    2px -2px 0px #000000,
+    2.1px -2.1px 0px #000000,
+    2.2px -2.2px 0px #000000,
+    2.3px -2.3px 0px #000000,
+    2.4px -2.4px 0px #000000,
+    2.5px -2.5px 0px #000000,
+    2.6px -2.6px 0px #000000,
+    2.7px -2.7px 0px #000000,
+    2.8px -2.8px 0px #000000,
+    2.9px -2.9px 0px #000000,
+    3px -3px 0px #000000,
+    3.1px -3.1px 0px #000000,
+    3.2px -3.2px 0px #000000,
+    3.3px -3.3px 0px #000000,
+    3.4px -3.4px 0px #000000,
+    3.5px -3.5px 0px #000000,
+    3.6px -3.6px 0px #000000,
+    3.7px -3.7px 0px #000000,
+    3.8px -3.8px 0px #000000,
+    3.9px -3.9px 0px #000000,
+    4px -4px 0px #000000,
+    4.1px -4.1px 0px #000000,
+    4.2px -4.2px 0px #000000,
+    4.3px -4.3px 0px #000000,
+    4.4px -4.4px 0px #000000,
+    4.5px -4.5px 0px #000000,
+    4.6px -4.6px 0px #000000,
+    4.7px -4.7px 0px #000000,
+    4.8px -4.8px 0px #000000,
+    4.9px -4.9px 0px #000000,
+    5px -5px 0px #000000,
+    5.1px -5.1px 0px #000000,
+    5.2px -5.2px 0px #000000,
+    5.3px -5.3px 0px #000000,
+    5.4px -5.4px 0px #000000,
+    5.5px -5.5px 0px #000000,
+    5.6px -5.6px 0px #000000,
+    5.7px -5.7px 0px #000000,
+    5.8px -5.8px 0px #000000,
+    5.9px -5.9px 0px #000000,
+    6px -6px 0px #000000,
+    6.1px -6.1px 0px #000000,
+    6.2px -6.2px 0px #000000,
+    6.3px -6.3px 0px #000000,
+    6.4px -6.4px 0px #000000,
+    6.5px -6.5px 0px #000000,
+    6.6px -6.6px 0px #000000,
+    6.7px -6.7px 0px #000000,
+    6.8px -6.8px 0px #000000,
+    6.9px -6.9px 0px #000000,
+    7px -7px 0px #000000;
+    color: white;
+}
+
+main section.details {
+    padding-left: 10rem;
+    padding-right: 10rem;
+    padding-bottom: 5em;
+    margin-top: 30px;
+}
+
+main section.details img {
+    border: 20px double black;
+}
+
+.back {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding-left: 2rem;
+}
+
+.back-btn {
+    margin-top: 20px;
+}
+
+.demo-link {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding-top: 20px;
+    display: block;
+    margin-left: 350px;
+}
+
+.body-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    color: #ffffff;
+    line-height: 1.5em;
+    width: 700px;
+    margin-top: 0;
+}
+
+.body-text-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+.h3 {
+    margin-top: 0;
+    font-size: 3em;
+    padding-right: 80px;
+    width: 300px;
+    text-transform: uppercase;
+    text-align: right;
+    font-family: Futura-condensed;
+    color: #ffffff;
+    text-shadow: 0px 0px 0px #000000,
+    0.1px -0.1px 0px #000000,
+    0.2px -0.2px 0px #000000,
+    0.3px -0.3px 0px #000000,
+    0.4px -0.4px 0px #000000,
+    0.5px -0.5px 0px #000000,
+    0.6px -0.6px 0px #000000,
+    0.7px -0.7px 0px #000000,
+    0.8px -0.8px 0px #000000,
+    0.9px -0.9px 0px #000000,
+    1px -1px 0px #000000,
+    1.1px -1.1px 0px #000000,
+    1.2px -1.2px 0px #000000,
+    1.3px -1.3px 0px #000000,
+    1.4px -1.4px 0px #000000,
+    1.5px -1.5px 0px #000000,
+    1.6px -1.6px 0px #000000,
+    1.7px -1.7px 0px #000000,
+    1.8px -1.8px 0px #000000,
+    1.9px -1.9px 0px #000000,
+    2px -2px 0px #000000,
+    2.1px -2.1px 0px #000000,
+    2.2px -2.2px 0px #000000,
+    2.3px -2.3px 0px #000000,
+    2.4px -2.4px 0px #000000,
+    2.5px -2.5px 0px #000000,
+    2.6px -2.6px 0px #000000,
+    2.7px -2.7px 0px #000000,
+    2.8px -2.8px 0px #000000,
+    2.9px -2.9px 0px #000000,
+    3px -3px 0px #000000,
+    3.1px -3.1px 0px #000000,
+    3.2px -3.2px 0px #000000,
+    3.3px -3.3px 0px #000000,
+    3.4px -3.4px 0px #000000,
+    3.5px -3.5px 0px #000000,
+    3.6px -3.6px 0px #000000,
+    3.7px -3.7px 0px #000000,
+    3.8px -3.8px 0px #000000,
+    3.9px -3.9px 0px #000000,
+    4px -4px 0px #000000,
+    4.1px -4.1px 0px #000000,
+    4.2px -4.2px 0px #000000,
+    4.3px -4.3px 0px #000000,
+    4.4px -4.4px 0px #000000,
+    4.5px -4.5px 0px #000000,
+    4.6px -4.6px 0px #000000,
+    4.7px -4.7px 0px #000000,
+    4.8px -4.8px 0px #000000,
+    4.9px -4.9px 0px #000000,
+    5px -5px 0px #000000;
+}
+
+.p-span:nth-of-type(1) {
+    display: block;
+    margin-top: 50px;
+}
+
+.p-span:nth-of-type(2) {
+    display: block;
+    margin-top: 10px;
+}
+
+img:hover {
+    -webkit-filter: hue-rotate(90deg);
+    filter: hue-rotate(90deg);
+    /* -webkit-filter: invert(.8);
+    filter: invert(.8); */
+  }
+
+a:focus {
+    border: none;
+    outline: none;
+}
+
+.section-imagery {
+    margin-bottom: 150px;
+}
+
+section.details a img.image-design1 {
+    width: 500px;
+}
+
