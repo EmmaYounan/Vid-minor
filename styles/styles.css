@@ -20,6 +20,7 @@ body {
 
 .scroll-container {
     max-width: 100%;
+    height: 350px;
     margin: 0 auto;
     margin-top: 100px;
     display: flex;
@@ -37,14 +38,123 @@ body {
     display: none;
 }
 
-h2 {
+.scroll-container a {
     scroll-snap-align: center;
-    padding-left: 2.1em;
-    padding-right: 2.1em;
+    margin-right: 7em;
+    margin-left: 7em;
+}
+.scroll-container a:first-of-type {
+    margin-left: 30em;
+}
+.scroll-container a:last-of-type {
+    padding-right: 30em;
+}
+
+.scroll-container a:nth-of-type(1) article {
+    position: relative;
+    width: 265px;
+}
+.scroll-container a:nth-of-type(2) article {
+    position: relative;
+    width: 705px;
+}
+.scroll-container a:nth-of-type(3) article {
+    position: relative;
+    width: 471px;
+}
+.scroll-container a:nth-of-type(4) article {
+    position: relative;
+    width: 527px;
+}
+.scroll-container a:nth-of-type(5) article {
+    position: relative;
+    width: 412px;
+}
+.scroll-container a:nth-of-type(6) article {
+    position: relative;
+    width: 416px;
+}
+.scroll-container a:nth-of-type(7) article {
+    position: relative;
+    width: 352px;
+}
+.scroll-container a:nth-of-type(8) article {
+    position: relative;
+    width: 262px;
+}
+.scroll-container a:nth-of-type(9) article {
+    position: relative;
+    width: 265px;
+}
+
+/* .scroll-container a:nth-of-type(1) article h2 {
+    padding-left: 8em;
+    width: 263px;
+} */
+
+/* .scroll-container a:nth-of-type(2) article h2 {
+    width: 703px;
+}
+
+.scroll-container a:nth-of-type(3) article h2 {
+    width: 469px;
+}
+
+.scroll-container a:nth-of-type(4) article h2 {
+    width: 525px;
+}
+
+.scroll-container a:nth-of-type(5) article h2 {
+    width: 410px;
+}
+
+.scroll-container a:nth-of-type(6) article h2 {
+    width: 414px;
+}
+
+.scroll-container a:nth-of-type(7) article h2 {
+    width: 350px;
+}
+
+.scroll-container a:nth-of-type(8) article h2 {
+    width: 260px;
+}
+
+.scroll-container a:nth-of-type(9) article h2 {
+    padding-right: 7em;
+    width: 263px;
+} */
+
+.scroll-container article img {
+    position: absolute;
+    left: 1px;
+    right: 1px;
+    width: 260px;
+    display: block;
+    margin: 0 auto;
+}
+
+h2 {
     color: #000000;
     font-family: Futura-condensed;
     font-size: 4em;
     text-transform: uppercase;
+}
+
+.scroll-container h2 {
+    position: absolute;
+    left: 1px;
+    right: 1px;
+    top: 25%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 0;
+    color: #000000;
+    font-family: Futura-condensed;
+    font-size: 4em;
+    text-transform: uppercase;
+    width: auto;
+    z-index: 2;
 }
 
 .about {
@@ -302,43 +412,7 @@ h2:hover {
     color: white;
 }
 
-.scroll-container a:nth-of-type(1) article h2 {
-    padding-left: 8em;
-    width: 263px;
-}
 
-.scroll-container a:nth-of-type(2) article h2 {
-    width: 703px;
-}
-
-.scroll-container a:nth-of-type(3) article h2 {
-    width: 469px;
-}
-
-.scroll-container a:nth-of-type(4) article h2 {
-    width: 525px;
-}
-
-.scroll-container a:nth-of-type(5) article h2 {
-    width: 410px;
-}
-
-.scroll-container a:nth-of-type(6) article h2 {
-    width: 414px;
-}
-
-.scroll-container a:nth-of-type(7) article h2 {
-    width: 350px;
-}
-
-.scroll-container a:nth-of-type(8) article h2 {
-    width: 260px;
-}
-
-.scroll-container a:nth-of-type(9) article h2 {
-    padding-right: 7em;
-    width: 263px;
-}
 
 .home-footer {
     position: absolute;
@@ -631,4 +705,14 @@ section.details a img.image-design1 {
 
 .h3-about {
 
+}
+
+.gifs  img{
+    opacity: 0;
+    transition: all 1s;
+}
+
+.in-view  img{
+    opacity: 1;
+    transition: all 1s;
 }
