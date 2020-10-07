@@ -1,2 +1,2 @@
 # Vid-minor
- Everything frim the VID Minor
+ Everything from the VID Minor
